@@ -4,7 +4,7 @@ vim.opt.hls=true
 vim.opt.ignorecase=true
 vim.opt.smartcase=true
 vim.opt.autowrite=true
-vim.cmd.colorscheme("retrobox")
+vim.opt.signcolumn="yes" -- always show the diag gutter
+vim.cmd [[colorscheme retrobox]]
 
 require("config.lazy")
-
