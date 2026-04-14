@@ -1,5 +1,4 @@
-return {
-	{
+return { {
 		"ray-x/go.nvim",
 		dependencies = {  -- optional packages
 			"ray-x/guihua.lua",
@@ -26,4 +25,16 @@ return {
 		ft = {"go", 'gomod'},
 		build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
 	},
+	{
+		"leoluz/nvim-dap-go",
+		dependencies = {
+			"mfussenegger/nvim-dap",
+		},
+		config = function()
+			require('dap-go').setup()
+		end,
+		keys = { -- Example mapping to toggle outline
+			{ "<leader>td", "<cmd>lua require('dap-go').debug_test()<CR>", desc = "Debug test" },
+		},
+	}
 }

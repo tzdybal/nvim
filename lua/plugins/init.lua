@@ -3,6 +3,7 @@ return {
 		"neovim/nvim-lspconfig",
 		config = function()
 			vim.lsp.enable('gopls')
+			vim.lsp.enable('golangci_lint_ls')
 		end,
 	},
 	{
